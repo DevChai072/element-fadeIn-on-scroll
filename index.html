@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./myStyle.css">
+    <script src="./jquery-3.4.1.js"></script>
+</head>
+<body>
+    <div class="nav-grid">
+        <div class="title-head">
+            <h1>Gallery Images</h1>
+        </div>
+    </div>
+
+    <div class="container">
+
+        <div class="grid-img">
+            <div class="item">
+                <img src="./img/girl_01.jpg" alt="images">
+                <p><cite>ภาพโดย <a href="https://pixabay.com/th/users/1866946-1866946/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1262800">Mihai Paraschiv</a> จาก <a href="https://pixabay.com/th/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1262800">Pixabay</a></cite></p>
+            </div>
+        </div>
+
+        <div class="grid-img">
+            <div class="item">
+                <img src="./img/girl_01.jpg" alt="images">
+                <p><cite>ภาพโดย <a href="https://pixabay.com/photos/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=336672">Free-Photos</a> จาก <a href="https://pixabay.com/th/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=336672">Pixabay</a></cite></p>
+            </div>
+        </div>
+
+        <div class="grid-img">
+            <div class="item">
+                <img src="./img/girl_01.jpg" alt="images">
+                <p><cite>ภาพโดย <a href="https://pixabay.com/th/users/1866946-1866946/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1262800">Mihai Paraschiv</a> จาก <a href="https://pixabay.com/th/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1262800">Pixabay</a></cite></p>
+            </div>
+        </div>
+
+        <div class="grid-img">
+            <div class="item">
+                <img src="./img/girl_01.jpg" alt="images">
+                <p><cite>ภาพโดย <a href="https://pixabay.com/th/users/1866946-1866946/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1262800">Mihai Paraschiv</a> จาก <a href="https://pixabay.com/th/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1262800">Pixabay</a></cite></p>
+            </div>
+        </div>
+
+        <div class="grid-img">
+            <div class="item">
+                <img src="./img/girl_01.jpg" alt="images">
+                <p><cite>ภาพโดย <a href="https://pixabay.com/th/users/1866946-1866946/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1262800">Mihai Paraschiv</a> จาก <a href="https://pixabay.com/th/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1262800">Pixabay</a></cite></p>
+            </div>
+        </div>
+
+        <div class="grid-img">
+            <div class="item">
+                <img src="./img/girl_01.jpg" alt="images">
+                <p><cite>ภาพโดย <a href="https://pixabay.com/th/users/1866946-1866946/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1262800">Mihai Paraschiv</a> จาก <a href="https://pixabay.com/th/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1262800">Pixabay</a></cite></p>
+            </div>
+        </div>
+
+        <div class="grid-img">
+            <div class="item">
+                <img src="./img/girl_01.jpg" alt="images">
+                <p><cite>ภาพโดย <a href="https://pixabay.com/th/users/1866946-1866946/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1262800">Mihai Paraschiv</a> จาก <a href="https://pixabay.com/th/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1262800">Pixabay</a></cite></p>
+            </div>
+        </div>
+
+        <div class="grid-img">
+            <div class="item">
+                <img src="./img/girl_01.jpg" alt="images">
+                <p><cite>ภาพโดย <a href="https://pixabay.com/th/users/1866946-1866946/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1262800">Mihai Paraschiv</a> จาก <a href="https://pixabay.com/th/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1262800">Pixabay</a></cite></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        
+        // https://codepen.io/obadaa/pen/VQQYpN
+
+        $(document).ready(function() {
+            
+            $(window).scroll( function(){
+            
+                $('.grid-img').each( function(i){
+                    
+                    var bottom_of_object = $(this).position().top + $(this).outerHeight();
+                    var bottom_of_window = $(window).scrollTop() + $(window).height();
+                    
+                    if( bottom_of_window > bottom_of_object ){
+                        $(this).animate({'opacity':'1'},1500);
+                    }
+                }); 
+            
+            });
+
+        });
+    </script>
+</body>
+</html>
